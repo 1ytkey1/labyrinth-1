@@ -13,7 +13,7 @@ back = transform.scale(image.load('background1.jpg'), (W, H))
 clock = time.Clock()
 
 mixer.init()
-mixer.music.load('jungles.ogg')
+mixer.music.load('fonmusic.mp3')
 mixer.music.set_volume(0.4)
 mixer.music.play()
 
@@ -94,6 +94,9 @@ wall10 = Wall(108, 126, 130, 10, 100, 380, 210)
 wall12 = Wall(108, 126, 130, 10, 100, 480, 120)
 wall14 = Wall(108, 126, 130, 10, 180, 580, 120)
 wall21 = Wall(108, 126, 130, 10, 180, 520, 400)
+wall22 = Wall(108, 126, 130, 10, 100, 290, 400)
+wall25 = Wall(108, 126, 130, 10, 100, 100, 490)
+wall27 = Wall(108, 126, 130, 10, 100, 240, 580)
 # горизонтальні
 wall13 = Wall(108, 126, 130, 390, 10, 100, 300)
 wall5 = Wall(108, 126, 130, 60, 10, 20, 120)
@@ -106,6 +109,9 @@ wall17 = Wall(108, 126, 130, 140, 10, 210, 400)
 wall18 = Wall(108, 126, 130, 110, 10, 470, 390)
 wall19 = Wall(108, 126, 130, 90, 10, 590, 490)
 wall20 = Wall(108, 126, 130, 170, 10, 520, 580)
+wall23 = Wall(108, 126, 130, 140, 10, 290, 490)
+wall24 = Wall(108, 126, 130, 110, 10, 100, 490)
+wall26 = Wall(108, 126, 130, 330, 10, 100, 580)
 
 while game:
     for e in event.get():
@@ -138,7 +144,13 @@ while game:
     wall19.reset()
     wall20.reset()
     wall21.reset()
-    if sprite.collide_rect(hero, wall1) or sprite.collide_rect(hero, wall2) or sprite.collide_rect(hero, wall3) or sprite.collide_rect(hero, wall4) or sprite.collide_rect(hero, wall5) or sprite.collide_rect(hero, wall6) or sprite.collide_rect(hero, wall7) or sprite.collide_rect(hero, wall8) or sprite.collide_rect(hero, wall9) or sprite.collide_rect(hero, wall10) or sprite.collide_rect(hero, wall11) or sprite.collide_rect(hero, wall12) or sprite.collide_rect(hero, wall13) or sprite.collide_rect(hero, wall14) or sprite.collide_rect(hero, wall15) or sprite.collide_rect(hero, wall16) or sprite.collide_rect(hero, wall17) or sprite.collide_rect(hero, wall18) or sprite.collide_rect(hero, wall19) or sprite.collide_rect(hero, wall20) or sprite.collide_rect(hero, enemy):
+    wall22.reset()
+    wall23.reset()
+    wall24.reset()
+    wall25.reset()
+    wall26.reset()
+    wall27.reset()
+    if sprite.collide_rect(hero, wall1) or sprite.collide_rect(hero, wall2) or sprite.collide_rect(hero, wall3) or sprite.collide_rect(hero, wall4) or sprite.collide_rect(hero, wall5) or sprite.collide_rect(hero, wall6) or sprite.collide_rect(hero, wall7) or sprite.collide_rect(hero, wall8) or sprite.collide_rect(hero, wall9) or sprite.collide_rect(hero, wall10) or sprite.collide_rect(hero, wall11) or sprite.collide_rect(hero, wall12) or sprite.collide_rect(hero, wall13) or sprite.collide_rect(hero, wall14) or sprite.collide_rect(hero, wall15) or sprite.collide_rect(hero, wall16) or sprite.collide_rect(hero, wall17) or sprite.collide_rect(hero, wall18) or sprite.collide_rect(hero, wall19) or sprite.collide_rect(hero, wall20) or sprite.collide_rect(hero, wall21) or sprite.collide_rect(hero, wall22) or sprite.collide_rect(hero, wall23) or sprite.collide_rect(hero, wall24) or sprite.collide_rect(hero, wall25) or sprite.collide_rect(hero, wall26) or sprite.collide_rect(hero, wall27) or sprite.collide_rect(hero, enemy):
         hero.rect.x = 20
         hero.rect.y = 40
     if sprite.collide_rect(hero, gold):
